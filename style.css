@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+/* Estilo general */
+* {
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative; /* Elimina el position: fixed para que el footer no se superponga al contenido */
+    width: 100%;
+}
+
+body {
+    color: #f7f7f7;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center; /* Para centrar el texto en pantallas pequeñas */
+}
+
+h1 {
+    font-size: 2rem; /* Ajusta el tamaño del título */
+    font-weight: 10;
+    color: #fbff00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 600;
+    word-wrap: break-word; /* Evita que las palabras se corten */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.greetings > span {
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+/* Animación de resplandor */
+@keyframes glow {
+    0%, 100% {
+        color: hwb(53 91% 6%);
+        text-shadow: 0 0 10px #fbff00, 0 0 40px #fbff00, 0 0 100px #fbff00;
+    }
+    10%, 90% {
+        color: #696565;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(2) {
+    animation-delay: .2s;
+}
+.greetings > span:nth-child(3) {
+    animation-delay: .4s;
+}
+.greetings > span:nth-child(4) {
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5) {
+    animation-delay: .8s;
+}
+
+/* Descripción debajo del título */
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #fbff00;
+}
+
+/* Estilo para el botón */
+.button button {
+    background-color: yellow;
+    border: none;
+    padding: 8px 18px;
+    font-size: 6px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button button a {
+    text-decoration: none;
+    color: inherit; /* El enlace hereda el color del botón */
+}
+
+.button button:hover {
+    background-color: orange;
+    box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media screen and (max-width: 660px) {
+    body {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Asegura que el texto esté centrado horizontalmente */
+    }
+    
+    .greetings {
+        font-size: 2.5rem; /* Reduce un poco más el tamaño del texto */
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 10px; /* Añade espacio para separar bien los elementos */
+        word-wrap: break-word; /* Asegura que el texto no se salga de los márgenes */
+    }
+
+    .description {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        line-height: 1.4; /* Mejora la legibilidad del texto */
+        text-align: center; /* Asegura que la descripción esté centrada */
+    }
+
+    .button button {
+        padding: 10px 16px;
+        font-size: 1rem;
+        margin: 0 auto; /* Centra el botón horizontalmente */
+        display: block; /* Asegura que el botón ocupe toda su línea */
+    }
+
+    .button button a {
+        font-size: 0.9rem;
+    }
+
+    /* Ajusta el contenedor si lo tienes */
+    .container {
+        max-width: 100%;
+        width: 100%; /* Asegura que el contenido ocupe todo el ancho de la pantalla */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
